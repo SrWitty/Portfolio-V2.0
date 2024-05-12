@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/neon.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      body {
+        background-color: #1f2833;
+        color: #c5c6c7;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        animation: neonBackground 5s infinite alternate;
+      }
+      .external-link {
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        border: none;
+        background-color: transparent;
+        text-decoration: none;
+        color: #45a29e;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .external-link:hover {
+        transform: scale(1.2);
+      }
+
+      .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #0b0c10;
+        color: #66fcf1;
+        padding: 10px 0;
+      }
+
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white flex flex-col justify-center items-center min-h-screen">
+    <div class="container mt-5 mx-auto">
+      <div class="cover">
+        <h1 class="text-3xl md:text-5xl">Welcome to My Portfolio</h1>
+        <p class="lead">
+          I'm a passionate [Your Profession] with expertise in [Your Expertise].
+        </p>
+        <div class="social-icons">
+          <a href="#" onclick="copyLink('Facebook')" class="social-icon"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" onclick="copyLink('Twitter')" class="social-icon"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" onclick="copyLink('LinkedIn')" class="social-icon"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="#" onclick="copyLink('Discord')" class="social-icon"
+            ><i class="fab fa-discord"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="skills">
+        <h2 class="text-center">Skills</h2>
+        <p class="text-center">
+          Here are some of the technologies I'm proficient in:
+        </p>
+        <div class="flex flex-wrap justify-center">
+          <i class="fab fa-php skill-icon" title="PHP - Hypertext Preprocessor">
+            <div class="tooltip">PHP - Hypertext Preprocessor</div>
+          </i>
+          <i class="fas fa-database skill-icon" title="Database">
+            <div class="tooltip">Database</div>
+          </i>
+          <i
+            class="fab fa-react skill-icon"
+            title="React.js - A JavaScript library for building user interfaces"
+          >
+            <div class="tooltip">React.js</div>
+          </i>
+          <i
+            class="fab fa-html5 skill-icon"
+            title="HTML5 - Hypertext Markup Language"
+          >
+            <div class="tooltip">HTML5</div>
+          </i>
+          <i
+            class="fab fa-css3-alt skill-icon"
+            title="CSS3 - Cascading Style Sheets"
+          >
+            <div class="tooltip">CSS3</div>
+          </i>
+          <i
+            class="fab fa-js skill-icon"
+            title="JavaScript - Programming language of HTML and the Web"
+          >
+            <div class="tooltip">JavaScript</div>
+          </i>
+          <i
+            class="fab fa-css3 skill-icon"
+            title="CSS - Cascading Style Sheets"
+          >
+            <div class="tooltip">CSS</div>
+          </i>
+          <i class="fab fa-bootstrap skill-icon" title="Bootstrap">
+            <div class="tooltip">Bootstrap</div>
+          </i>
+          <i
+            class="fab fa-node-js skill-icon"
+            title="Node.js - JavaScript runtime environment"
+          >
+            <div class="tooltip">Node.js</div>
+          </i>
+          <i
+            class="fas fa-file-code skill-icon"
+            title="File Code - General coding skills"
+          >
+            <div class="tooltip">File Code</div>
+          </i>
+        </div>
+      </div>
+
+      <div class="project-table">
+        <h2 class="text-center text-2xl mb-4">Top 5 GitHub Projects</h2>
+        <table class="table-auto w-full bg-gray-800 rounded-lg overflow-hidden">
+          <thead>
+            <tr>
+              <th class="px-4 py-2">Project Name</th>
+              <th class="px-4 py-2">Description</th>
+              <th class="px-4 py-2">Stars</th>
+              <th class="px-4 py-2">URL</th>
+            </tr>
+          </thead>
+          <tbody id="projectData">
+            <!-- Projects will be listed here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div style="height: 100px"></div>
+
+    <div class="footer">
+      <p>&copy; <span id="currentYear"></span> My Portfolio</p>
+    </div>
+
+  </body>
+</html>

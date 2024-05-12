@@ -1,0 +1,30 @@
+.social-icon {
+    font-size: 28px;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
+    color: #45a29e;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+
+
+
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .social-icon {
+    font-size: 36px;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+    color: #45a29e;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.2);
+  }

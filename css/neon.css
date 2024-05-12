@@ -1,0 +1,49 @@
+.cover {
+    padding: 100px 0;
+    text-align: center;
+  }
+
+  .cover h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #66fcf1;
+    /* Neon  */
+    text-shadow: 0 0 10px #66fcf1, 0 0 20px #45a29e, 0 0 30px #45a29e,
+      0 0 40px #45a29e, 0 0 70px #45a29e, 0 0 80px #45a29e,
+      0 0 100px #45a29e, 0 0 150px #45a29e;
+    animation: flicker 1.5s infinite alternate;
+  }
+
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+
+  .cover p {
+    font-size: 1.5rem;
+  }
+
+
+  @keyframes neonBackground {
+    0% {
+      background-color: #1f2833;
+    }
+    50% {
+      background-color: #0b0c10;
+    }
+    100% {
+      background-color: #1f2833;
+    }
+  }
+
+  .jumbotron {
+    padding: 3rem 1rem;
+  }
+
+  .lead {
+    font-size: 1.2rem;
+  }
